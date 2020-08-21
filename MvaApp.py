@@ -27,7 +27,7 @@ st.markdown('<style>h3{color: crimson;}</style>', unsafe_allow_html=True)
 st.markdown('<style>p{color: darkmagenta;}</style>', unsafe_allow_html=True)
 
 
-st.markdown('<style>' + open('/content/drive/My Drive/icons.css').read() + '</style>', unsafe_allow_html=True)
+st.markdown('<style>' + open('icons.css').read() + '</style>', unsafe_allow_html=True)
 
 st.sidebar.header('User Input Parameters')
 st.write("""
@@ -42,7 +42,7 @@ if uploaded_file is not None:
    data = pd.read_csv(uploaded_file, encoding= 'unicode_escape')
    st.write(data.head())
 else:  
-   data = pd.read_csv("/content/drive/My Drive/BemisData.csv", encoding= 'unicode_escape')
+   data = pd.read_csv("BemisData.csv", encoding= 'unicode_escape')
    st.write(data.head())
 st.write('To upload your own data refer to user input section (Columns should be same)')
 st.markdown("""## Let us visualize our Data: """+'<i class="material-icons">map</i>', unsafe_allow_html=True)
