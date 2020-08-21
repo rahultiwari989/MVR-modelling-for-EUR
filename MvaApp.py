@@ -352,7 +352,7 @@ if mvr():
   return EUR
  results=pd.DataFrame(columns=['Original EUR','Predicted EUR','Error'])
  model = []
- with open('summary.txt', 'w') as fh: 
+ with open('https://firebasestorage.googleapis.com/v0/b/ourtheatre-2e4fc.appspot.com/o/summary.txt?alt=media&token=ee4d752b-27ad-4f14-8b37-c7c24d59545c', 'w') as fh: 
   fh.write('\t WELCOME!! \n \n')
  u=0
  st.write("""### Showing Results for all Clusters:  """)
@@ -411,7 +411,7 @@ if mvr():
   model.append(sm.OLS(Y, X).fit())
   predictions3 = model[u].predict(X) 
   u=u+1
-  with open('summary.txt', 'a') as fh: 
+  with open('https://firebasestorage.googleapis.com/v0/b/ourtheatre-2e4fc.appspot.com/o/summary.txt?alt=media&token=ee4d752b-27ad-4f14-8b37-c7c24d59545c', 'a') as fh: 
    fh.write('Result Summary for Cluster '+str(i)+' \n \n')
    fh.write(model[u-3].summary().as_text())
    fh.write('\n \n')
@@ -429,7 +429,7 @@ if mvr():
  st.write('Std. errors have been indicated in parenthesis')
  components.html("""<HTML>
  <BODY>
-<form method="get" action="summary.txt">
+<form method="get" action="https://firebasestorage.googleapis.com/v0/b/ourtheatre-2e4fc.appspot.com/o/summary.txt?alt=media&token=ee4d752b-27ad-4f14-8b37-c7c24d59545c">
    <button type="submit">Click Here To Download Complete MVR Analysis Summary!</button>
 </form>
 </BODY>
