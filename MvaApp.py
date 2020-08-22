@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from kneed import KneeLocator
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
-
+import base64
 import altair as alt
 import pydeck as pdk
 from streamlit import caching
