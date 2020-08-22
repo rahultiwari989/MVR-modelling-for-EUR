@@ -427,6 +427,11 @@ if mvr():
  ppp.add_title('Table 1 - OLS Regressions')
  st.write(ppp.tables[0])
  st.write('Std. errors have been indicated in parenthesis')
+ data1 = open('summary.txt', 'rb').read()
+ b64 = base64.b64encode(data1).decode('UTF-8')
+ #b64 = base64.b64encode(data.as_text().encode()).decode()  # some strings <-> bytes conversions necessary here
+ href = f'<a href="data:file/txt;base64,{b64}">Click Here To Download Complete MVR Analysis Summary!</a> (right-click and save as &lt;some_name&gt;.txt)'
+ st.markdown(href, unsafe_allow_html=True)
  components.html("""<HTML>
  <BODY>
 <form method="get" action="https://raw.githubusercontent.com/dataprofessor/data/master/penguins_example.csv">
